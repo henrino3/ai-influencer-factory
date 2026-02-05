@@ -586,3 +586,83 @@ h1, h2, h3 {
         grid-template-columns: 1fr;
     }
 }
+
+/* Lead Capture Form */
+.lead-form {
+    max-width: 500px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.form-row input,
+.form-row select {
+    flex: 1;
+    padding: 16px 20px;
+    font-size: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--light);
+    transition: all 0.3s ease;
+}
+
+.form-row input::placeholder {
+    color: var(--gray);
+}
+
+.form-row select {
+    cursor: pointer;
+}
+
+.form-row select option {
+    background: var(--dark);
+    color: var(--light);
+}
+
+.form-row input:focus,
+.form-row select:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.lead-form button {
+    margin-top: 8px;
+}
+
+.form-success {
+    text-align: center;
+    padding: 40px;
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: 16px;
+    max-width: 500px;
+    margin: 40px auto;
+}
+
+.form-success h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.cta-alt {
+    margin-top: 24px;
+    color: var(--gray);
+}
+
+.cta-alt a {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+    }
+}

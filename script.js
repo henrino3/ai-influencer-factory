@@ -70,3 +70,45 @@ document.addEventListener('DOMContentLoaded', function() {
         hero.style.transform = 'translateY(0)';
     }
 });
+
+// Lead Form Submission
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('lead-form');
+    const successMessage = document.getElementById('form-success');
+    
+    if (form) {
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(form);
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    form.style.display = 'none';
+                    successMessage.style.display = 'block';
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                submitBtn.textContent = 'Error - Try Again';
+                submitBtn.disabled = false;
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                }, 2000);
+            }
+        });
+    }
+});

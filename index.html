@@ -275,11 +275,30 @@
     <section id="contact" class="cta">
         <div class="container">
             <h2 class="cta-title">Ready to Build Your AI Influencer Empire?</h2>
-            <p class="cta-subtitle">The window for AI influencers is NOW. First-movers are seeing insane ROI. Don't get left behind.</p>
-            <div class="cta-buttons">
-                <a href="mailto:henry@curacel.ai?subject=AI%20Influencer%20Factory%20Inquiry" class="btn btn-primary btn-large">Start Building Free</a>
-                <a href="mailto:henry@curacel.ai?subject=AI%20Influencer%20Factory%20-%20Book%20a%20Call" class="btn btn-secondary btn-large">Book a Call</a>
+            <p class="cta-subtitle">The window for AI influencers is NOW. First-movers are seeing insane ROI. Do not get left behind.</p>
+            
+            <form class="lead-form" action="https://formspree.io/f/xyzgkkvy" method="POST" id="lead-form">
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-row">
+                    <select name="interest" required>
+                        <option value="">What are you interested in?</option>
+                        <option value="diy-course">DIY Course ()</option>
+                        <option value="done-for-you">Done-For-You (,500 + \/mo)</option>
+                        <option value="enterprise">Enterprise (Custom)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-large">Get Started Now</button>
+            </form>
+            
+            <div id="form-success" class="form-success" style="display: none;">
+                <h3>You are In!</h3>
+                <p>Check your email for next steps. We will be in touch within 24 hours.</p>
             </div>
+            
+            <p class="cta-alt">Prefer to talk? <a href="mailto:henry@curacel.ai?subject=AI%20Influencer%20Factory%20-%20Book%20a%20Call">Book a Call</a></p>
         </div>
     </section>
 
