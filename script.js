@@ -63,18 +63,23 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(section);
     });
     
-    // Hero should be visible immediately
+    // Hero and banner should be visible immediately
     const hero = document.querySelector('.hero');
+    const banner = document.querySelector('.lead-magnet-banner');
     if (hero) {
         hero.style.opacity = '1';
         hero.style.transform = 'translateY(0)';
     }
+    if (banner) {
+        banner.style.opacity = '1';
+        banner.style.transform = 'translateY(0)';
+    }
 });
 
-// Lead Form Submission
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('lead-form');
-    const successMessage = document.getElementById('form-success');
+// Generic form handler
+function setupFormHandler(formId, successId) {
+    const form = document.getElementById(formId);
+    const successMessage = document.getElementById(successId);
     
     if (form) {
         form.addEventListener('submit', async function(e) {
@@ -98,7 +103,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 if (response.ok) {
                     form.style.display = 'none';
-                    successMessage.style.display = 'block';
+                    if (successMessage) {
+                        successMessage.style.display = 'block';
+                    }
                 } else {
                     throw new Error('Form submission failed');
                 }
@@ -111,4 +118,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+}
+
+// Initialize form handlers
+document.addEventListener('DOMContentLoaded', function() {
+    setupFormHandler('lead-form', 'form-success');
+    setupFormHandler('checklist-form', 'checklist-success');
 });

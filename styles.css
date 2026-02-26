@@ -666,3 +666,180 @@ h1, h2, h3 {
         flex-direction: column;
     }
 }
+
+/* Lead Magnet Banner */
+.lead-magnet-banner {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    padding: 12px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #1a1a2e;
+}
+.lead-magnet-banner p {
+    margin: 0;
+}
+.banner-cta {
+    display: inline-block;
+    background: #1a1a2e;
+    color: #FFD700;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-left: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.banner-cta:hover {
+    background: #2a2a4e;
+    transform: translateY(-1px);
+}
+
+/* Hero CTA Highlight */
+.btn-highlight {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%) !important;
+    color: #1a1a2e !important;
+    border: none !important;
+}
+.btn-highlight:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+}
+
+/* Lead Magnet Section */
+.lead-magnet-section {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    padding: 80px 0;
+    border-top: 1px solid rgba(255, 215, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+}
+.lead-magnet-content {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 60px;
+    align-items: center;
+}
+.badge-free {
+    display: inline-block;
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    color: #1a1a2e;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+.lead-magnet-copy h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 16px;
+}
+.lead-magnet-desc {
+    color: #a0a0a0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+.checklist-preview {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.checklist-preview li {
+    color: #e0e0e0;
+    padding: 8px 0;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.checklist-preview li:last-child {
+    border-bottom: none;
+}
+
+/* Lead Magnet Form */
+.lead-magnet-form-wrapper {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    border-radius: 16px;
+    padding: 32px;
+}
+.lead-magnet-form h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+    text-align: center;
+}
+.lead-magnet-form input[type="text"],
+.lead-magnet-form input[type="email"] {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+.lead-magnet-form input::placeholder {
+    color: #888;
+}
+.lead-magnet-form input:focus {
+    outline: none;
+    border-color: #FFD700;
+    background: rgba(255, 255, 255, 0.1);
+}
+.btn-full {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+}
+.form-note {
+    text-align: center;
+    color: #888;
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+/* Form Success */
+.form-success {
+    text-align: center;
+    padding: 20px;
+}
+.form-success h3 {
+    color: #FFD700;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+.form-success p {
+    color: #a0a0a0;
+    margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .lead-magnet-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .lead-magnet-copy h2 {
+        font-size: 2rem;
+    }
+}
+@media (max-width: 600px) {
+    .lead-magnet-banner {
+        font-size: 13px;
+        padding: 10px 0;
+    }
+    .banner-cta {
+        display: block;
+        margin: 8px auto 0;
+        width: fit-content;
+    }
+    .lead-magnet-section {
+        padding: 60px 0;
+    }
+    .lead-magnet-form-wrapper {
+        padding: 24px;
+    }
+}

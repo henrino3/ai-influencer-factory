@@ -14,6 +14,13 @@
     <script defer src="https://cloud.umami.is/script.js" data-website-id="1e600e31-9df5-4afc-bee6-0f1951202b94"></script>
 </head>
 <body>
+    <!-- Lead Magnet Banner -->
+    <section class="lead-magnet-banner">
+        <div class="container">
+            <p>🎁 <strong>FREE:</strong> 7-Day AI Agent Launch Checklist — Deploy your first agent in one week <a href="#free-checklist" class="banner-cta">Download Now →</a></p>
+        </div>
+    </section>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
@@ -22,7 +29,7 @@
                 <p class="hero-subtitle">Create viral AI personas that grow to 50K followers, land sponsorships, and generate $2K+/month—without showing your face or spending $5K per post.</p>
                 <div class="hero-cta">
                     <a href="#pricing" class="btn btn-primary">Start Building Free</a>
-                    <a href="#proof" class="btn btn-secondary">Watch Demo (2 min)</a>
+                    <a href="#free-checklist" class="btn btn-secondary btn-highlight">Get Free 7-Day Checklist</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -38,6 +45,43 @@
                     <div class="metric">
                         <span class="metric-value">Week 2</span>
                         <span class="metric-label">First Brand Deal</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Checklist Section (Lead Magnet) -->
+    <section id="free-checklist" class="lead-magnet-section">
+        <div class="container">
+            <div class="lead-magnet-content">
+                <div class="lead-magnet-copy">
+                    <span class="badge-free">FREE DOWNLOAD</span>
+                    <h2>7-Day AI Agent Launch Checklist</h2>
+                    <p class="lead-magnet-desc">Your step-by-step guide to deploying your first AI agent in one week. Includes daily tasks, decision matrices, and prompt templates.</p>
+                    <ul class="checklist-preview">
+                        <li>✅ Day 1: Define Your Agent's Mission</li>
+                        <li>✅ Day 2: Choose Your Stack</li>
+                        <li>✅ Day 3: Set Up Your Environment</li>
+                        <li>✅ Day 4: Build Your Agent</li>
+                        <li>✅ Day 5: Test & Iterate</li>
+                        <li>✅ Day 6: Connect Your Workflow</li>
+                        <li>✅ Day 7: Launch & Monitor</li>
+                    </ul>
+                </div>
+                <div class="lead-magnet-form-wrapper">
+                    <form class="lead-magnet-form" action="https://formspree.io/f/xyzgkkvy" method="POST" id="checklist-form">
+                        <input type="hidden" name="source" value="7-day-checklist-lead-magnet">
+                        <h3>Get Your Free Checklist</h3>
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn btn-primary btn-full">Download Free Checklist</button>
+                        <p class="form-note">No spam. Unsubscribe anytime.</p>
+                    </form>
+                    <div id="checklist-success" class="form-success" style="display: none;">
+                        <h3>🎉 Check Your Email!</h3>
+                        <p>Your checklist is on its way. While you wait...</p>
+                        <a href="#pricing" class="btn btn-primary">Explore Our Services</a>
                     </div>
                 </div>
             </div>
@@ -281,6 +325,7 @@
             <p class="cta-subtitle">The window for AI influencers is NOW. First-movers are seeing insane ROI. Do not get left behind.</p>
             
             <form class="lead-form" action="https://formspree.io/f/xyzgkkvy" method="POST" id="lead-form">
+                <input type="hidden" name="source" value="main-contact-form">
                 <div class="form-row">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
@@ -297,8 +342,8 @@
             </form>
             
             <div id="form-success" class="form-success" style="display: none;">
-                <h3>You are In!</h3>
-                <p>Check your email for next steps. We will be in touch within 24 hours.</p>
+                <h3>🎉 You're In!</h3>
+                <p>Check your email for next steps. We'll be in touch within 24 hours.</p>
             </div>
             
             <p class="cta-alt">Prefer to talk? <a href="mailto:henry@curacel.ai?subject=AI%20Influencer%20Factory%20-%20Book%20a%20Call">Book a Call</a></p>
